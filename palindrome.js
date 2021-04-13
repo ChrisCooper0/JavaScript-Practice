@@ -9,7 +9,7 @@ isPalindrome = (str) => {
 };
 console.log(isPalindrome("Racecar"));
 
-// Same as sbove but uses template strings
+// Same as above but uses template strings
 isPalindrome = (str) => {
   let lowerStr = str.toLowerCase();
   let reverseLowerStr = lowerStr.split("").reverse().join("");
