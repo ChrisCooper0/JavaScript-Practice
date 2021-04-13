@@ -28,6 +28,17 @@ whileLoop = (arr) => {
   }
 };
 
+// Unlike the while loop (runs while true), do while runs at least once whether or not the condition is true.
+
+//Do While loop
+let i = 1;
+const n = 5;
+// do...while loop from 1 to 5
+do {
+  console.log(i);
+  i++;
+} while (i <= n);
+
 forLoop([1, 2, 3]);
 forInLoop({
   4: "Four",
