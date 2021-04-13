@@ -1,3 +1,4 @@
+// Checks is str is a palindrome
 isPalindrome = (str) => {
   let lowerStr = str.toLowerCase();
   if (lowerStr === lowerStr.split("").reverse().join("")) {
@@ -8,7 +9,7 @@ isPalindrome = (str) => {
 };
 console.log(isPalindrome("Racecar"));
 
-// Using template strings
+// Same as sbove but uses template strings
 isPalindrome = (str) => {
   let lowerStr = str.toLowerCase();
   let reverseLowerStr = lowerStr.split("").reverse().join("");

@@ -1,21 +1,25 @@
+// For loop
 forLoop = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     console.log(arr[i]);
   }
 };
 
+// For In loop
 forInLoop = (obj) => {
   for (let i in obj) {
     console.log(obj[i]);
   }
 };
 
+// For Of loop
 forOfLoop = (arr) => {
   for (let i of arr) {
     console.log(i);
   }
 };
 
+// While loop
 whileLoop = (arr) => {
   let i = 0;
   while (i < arr.length) {
