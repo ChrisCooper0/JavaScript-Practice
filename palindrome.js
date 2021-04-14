@@ -1,7 +1,6 @@
 // Checks is str is a palindrome
-isPalindrome = (str) => {
-  let lowerStr = str.toLowerCase();
-  if (lowerStr === lowerStr.split("").reverse().join("")) {
+isPalindrome = (str) => {  let newStr = str.replace(/\W+|_/g, "").toLowerCase();
+  if (newStr === newStr.split("").reverse().join("")) {
     return true;
   } else {
     return false;
@@ -11,9 +10,8 @@ console.log(isPalindrome("Racecar"));
 
 // Same as above but uses template strings
 isPalindrome = (str) => {
-  let lowerStr = str.toLowerCase();
-  let reverseLowerStr = lowerStr.split("").reverse().join("");
-  if (lowerStr === reverseLowerStr) {
+  let newStr = str.replace(/\W+|_/g, "").toLowerCase();
+  if (newStr === newStr.split("").reverse().join("")) {
     console.log(`${str} is a palindrome`);
   } else {
     console.log(`${str} is not a palindrome`);
