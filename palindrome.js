@@ -1,10 +1,7 @@
 // Checks is str is a palindrome
-isPalindrome = (str) => {  let newStr = str.replace(/\W+|_/g, "").toLowerCase();
-  if (newStr === newStr.split("").reverse().join("")) {
-    return true;
-  } else {
-    return false;
-  }
+isPalindrome = (str) => {
+  let newStr = str.replace(/\W+|_/g, "").toLowerCase();
+  return newStr === newStr.split("").reverse().join("") ? true : false;
 };
 console.log(isPalindrome("Racecar"));
 
