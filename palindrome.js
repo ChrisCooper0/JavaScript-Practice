@@ -16,3 +16,24 @@ isPalindrome = (str) => {
 };
 
 isPalindrome("Rotator");
+
+
+// Checks if str is a palindrome without built in methods
+isPalindrome = (str) => {
+  let lowerStr = str.toLowerCase();
+  let newStr = "";
+
+  for (let i = lowerStr.length - 1; i >= 0; i--) {
+    for (let j = newStr.length - 1; i >= 0; i--) {
+      newStr += lowerStr[i];
+    }
+    if (newStr === lowerStr) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+};
+
+console.log(isPalindrome("Racecar")); // Returns true
+console.log(isPalindrome("Notapalindrome")); // Returns false
