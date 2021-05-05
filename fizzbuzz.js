@@ -25,3 +25,13 @@ fizzBuzz = (num) => {
   }
 };
 console.log(fizzBuzz(15)); // Prints 'FizzBuzz'
+
+// Alternative example where a function accepts a max value as an argument and should only print any numbers divisible by either 3 or 5 but not both 3 and 5
+function fizzBuzz2(num) {
+  for (let i = 0; i <= num; i++) {
+    if ((i % 3 === 0 || i % 5 === 0) && !(i % 3 === 0 && i % 5 === 0)) {
+      console.log(i);
+    }
+  }
+}
+fizzBuzz2(18);
