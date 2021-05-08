@@ -34,4 +34,4 @@ function fizzBuzz2(num) {
     }
   }
 }
-fizzBuzz2(18);
+fizzBuzz2(18); 
