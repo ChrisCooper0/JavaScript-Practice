@@ -1,5 +1,4 @@
-// A function's this keyword behaves a little differently in JavaScript compared to other languages.
-// It also has some differences between strict mode and non-strict mode.
+// this references the object executing the function
 
 const test = {
   prop: 42,
@@ -9,3 +8,20 @@ const test = {
 };
 
 console.log(test.func()); // returns 42
+
+// method -> object
+const video = {
+  title: "a",
+  play() {
+    console.log(this);
+  },
+};
+video.play();
+
+// function -> global (window, global)
+
+function playVideo() {
+  console.log(this); // global window
+}
+
+playVideo();
