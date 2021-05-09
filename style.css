@@ -84,3 +84,10 @@
     display: flex;
   }
 }
+
+p,
+h1,
+h2 {
+  margin: 20px 10px;
+}
+
