@@ -1,2 +1,3 @@
 # JavaScript Practice
-### JavaScript fundamentals and examples
+
+### A collection of JavaScript fundamentals and examples
