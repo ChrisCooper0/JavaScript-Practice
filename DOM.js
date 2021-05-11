@@ -1,4 +1,4 @@
-// DOM Manipulation - Document Object Model
+// DOM Manipulation
 
 // Responsive Navbar
 const toggleButton = document.getElementsByClassName("toggle-button")[0];
