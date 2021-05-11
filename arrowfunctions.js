@@ -236,3 +236,117 @@ console.log(wackyWord("very", "kindly")); // 'verly'
 console.log(wackyWord("forever", "sick")); // 'forck'
 console.log(wackyWord("cellar", "door")); // 'celor'
 console.log(wackyWord("bagel", "sweep")); // 'bagep'
+
+// Write a function `divisible(num1, num2)` that accepts two numbers as arguments. The function should
+// return a boolean indicating whether or not `num1` is divisible by `num2`.
+
+let divisible = (num1, num2) => {
+  return num1 % num2 === 0;
+};
+
+console.log(divisible(12, 3)); // true
+console.log(divisible(12, 5)); // false
+console.log(divisible(60, 4)); // true
+console.log(divisible(60, 11)); // false
+console.log(divisible(21, 7)); // true
+console.log(divisible(21, 6)); // false
+
+// Write a function `caseChange` that accepts a string and a boolean as arguments. The function should
+// return the uppercase version of the string if the boolean is true. The function should return the
+// lowercase version of the string if the boolean is false.
+
+let caseChange = (str, bool) => {
+  if (bool === true) {
+    return str.toUpperCase();
+  } else {
+    return str.toLowerCase();
+  }
+};
+
+console.log(caseChange("Super", true)); // 'SUPER'
+console.log(caseChange("Super", false)); // 'super'
+console.log(caseChange("tAmBourine", true)); // 'TAMBOURINE'
+console.log(caseChange("tAmBourine", false)); // 'tambourine'
+
+// Write a function `inRange(min, max, n)` that accepts three numbers as arguments. The function should
+// return a boolean indicating if `n` is between `min` and `max` inclusive.
+
+let inRange = (min, max, n) => {
+  return n >= min && n <= max;
+};
+
+console.log(inRange(5, 13, 8)); // true
+console.log(inRange(5, 13, 29)); // false
+console.log(inRange(100, 125, 100)); // true
+console.log(inRange(100, 125, 99)); // false
+console.log(inRange(40, 45, 44)); // true
+console.log(inRange(40, 45, 45)); // true
+console.log(inRange(40, 45, 46)); // false
+
+// Write a function `averageOfFour(num1, num2, num3, num4)` that accepts four numbers as arguments. The
+// function should return the average of all four numbers.
+
+let averageOfFour = (num1, num2, num3, num4) => {
+  return (num1 + num2 + num3 + num4) / 4;
+};
+console.log(averageOfFour(10, 4, 12, 3)); // 7.25
+console.log(averageOfFour(-20, 50, 4, 21)); // 13.75
+console.log(averageOfFour(10, 4, 12, 3)); // 7.25
+console.log(averageOfFour(5, 5, 3, 7)); // 5
+
+// Write a function `numberChange` that accepts a number as an argument. The function should return
+// half the number if it is even. The function should return double the number if it is odd.
+
+let numberChange = (num) => {
+  if (num % 2 === 0) {
+    return num / 2;
+  } else {
+    return num * 2;
+  }
+};
+
+console.log(numberChange(6)); // 3
+console.log(numberChange(7)); // 14
+console.log(numberChange(16)); // 8
+console.log(numberChange(21)); // 42
+
+// Write a function `larger` that accepts two numbers as arguments. The function should return the
+// larger number.
+
+let larger = (num1, num2) => {
+  if (num1 > num2) {
+    return num1;
+  } else {
+    return num2;
+  }
+};
+
+console.log(larger(256, 400)); // 400
+console.log(larger(31, 4)); // 31
+console.log(larger(-6, 7)); // 7
+console.log(larger(11.3, 11.2)); // 11.3
+console.log(larger(-10, -3)); // -3
+
+// Write a function `contains(str1, str2)` that accepts two strings as arguments. The function should
+// return a boolean indicating whether or not `str2` is contained within `str1`. The function should
+// ignore any differences in capitalization.
+
+let contains = (str1, str2) => {
+  let lowerStr1 = str1.toLowerCase();
+  let lowerStr2 = str2.toLowerCase();
+  return lowerStr1.indexOf(lowerStr2) > -1;
+};
+
+// Alternative solution using the .includes() method
+
+// let contains = (str1, str2) => {
+//   let lowerStr1 = str1.toLowerCase();
+//   let lowerStr2 = str2.toLowerCase();
+//   return lowerStr1.includes(lowerStr2);
+// };
+
+console.log(contains("caterpillar", "pill")); // true
+console.log(contains("lion's share", "on")); // true
+console.log(contains("SORRY", "or")); // true
+console.log(contains("tangent", "gem")); // false
+console.log(contains("clock", "ok")); // false
