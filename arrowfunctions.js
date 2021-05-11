@@ -1,4 +1,4 @@
-// ES6 Arrow functions
+// ES6 Arrow functions with example problems below
 
 // Arrow function with no parameter
 const functionOne = () => {
