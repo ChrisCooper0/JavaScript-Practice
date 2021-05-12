@@ -47,3 +47,121 @@ forInLoop({
 });
 forOfLoop([7, 8, 9]);
 whileLoop([10, 11, 12]);
+
+// Loop examples
+
+// Write a function `oneToFour` that prints all whole numbers from one to four, inclusive. The function
+// takes in no arguments and doesn't need to return any value. It should just print to the terminal.
+
+let oneToFour = () => {
+  for (let i = 1; i <= 4; i++) {
+    console.log(i);
+  }
+};
+
+oneToFour();
+// prints
+//  1
+//  2
+//  3
+//  4
+
+// Write a function `countUp(max)` that accepts a max number as an argument. The function should print
+// all numbers from 1 up to and including the max. The function doesn't need to return any value. It
+// should just print to the terminal.
+
+let countUp = (max) => {
+  for (let i = 1; i <= max; i++) {
+    console.log(i);
+  }
+};
+
+countUp(5);
+// prints
+//  1
+//  2
+//  3
+//  4
+//  5
+
+countUp(3);
+// prints
+//  1
+//  2
+//  3
+
+// Write a function `minToMax(min, max)` that accepts two numbers as arguments. The function should
+// print all numbers from min to max inclusive. The function doesn't need to return any value. It
+// should just print to the terminal.
+
+let minToMax = (min, max) => {
+  for (let i = min; i <= max; i++) {
+    console.log(i);
+  }
+};
+
+minToMax(5, 9);
+// prints
+//  5
+//  6
+//  7
+//  8
+//  9
+
+minToMax(11, 13);
+// prints
+//  11
+//  12
+//  13
+
+minToMax(20, 11);
+
+// Write a function `stringIterate` that accepts a string as an argument. The function should print out
+// each character of the string, one by one. The function doesn't need to return any value. It should
+// just print to the terminal.
+
+let stringIterate = (str) => {
+  for (let i = 0; i < str.length; i++) {
+    console.log(str[i]);
+  }
+};
+
+stringIterate("celery");
+// prints
+//  c
+//  e
+//  l
+//  e
+//  r
+//  y
+
+stringIterate("hat");
+// prints
+//  h
+//  a
+//  t
+
+// Write a function `evens(max)` that accepts a max number as an argument. The function should print
+// all positive even numbers that are less than the max.
+
+let evens = (max) => {
+  for (let i = 1; i < max; i++) {
+    if (i % 2 === 0) {
+      console.log(i);
+    }
+  }
+};
+
+evens(11);
+// prints
+//  2
+//  4
+//  6
+//  8
+//  10
+
+evens(8);
+// prints
+//  2
+//  4
+//  6
