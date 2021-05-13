@@ -337,3 +337,45 @@ divisibleRange(10, 24, 4);
 //  12
 //  16
 //  20
+
+// Write a function `reverseIterate` that accepts a string as an argument. The function should print
+// the characters of the string one by one, in reverse order. The function doesn't need to return any
+// value. It should just print to the terminal.
+
+let reverseIterate = (str) => {
+  for (let i = str.length - 1; i >= 0; i--) {
+    console.log(str[i]);
+  }
+};
+
+reverseIterate("carrot");
+// prints
+//  t
+//  o
+//  r
+//  r
+//  a
+//  c
+
+reverseIterate("box");
+// prints
+//  x
+//  o
+//  b
+
+// Write a function `removeCapitals` that accepts a string as an argument. The function should return a
+// new version of the string with all capital letters removed.
+
+let removeCapitals = (str) => {
+  let newStr = "";
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === str[i].toLowerCase()) {
+      newStr += str[i];
+    }
+  }
+  return newStr;
+};
+
+console.log(removeCapitals("fOrEver")); // 'frver'
+console.log(removeCapitals("raiNCoat")); // 'raioat'
+console.log(removeCapitals("cElLAr Door")); // 'clr oor'
