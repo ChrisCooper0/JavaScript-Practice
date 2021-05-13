@@ -379,3 +379,77 @@ let removeCapitals = (str) => {
 console.log(removeCapitals("fOrEver")); // 'frver'
 console.log(removeCapitals("raiNCoat")); // 'raioat'
 console.log(removeCapitals("cElLAr Door")); // 'clr oor'
+
+// Write a function `raisePower(base, exponent)` that accepts two numbers, `base` and `exponent`. The
+// function should return `base` raised to the `exponent` power.
+//
+// For example, raisePower(2, 5) should return 32 because 2 * 2 * 2 * 2 * 2 = 32
+// For example, raisePower(4, 3) should return 64 because 4 * 4 * 4 = 64
+
+let raisePower = (base, exponent) => {
+  let num = 1;
+  for (let i = 1; i <= exponent; i++) {
+    num *= base;
+  }
+  return num;
+};
+console.log(raisePower(2, 5)); // 32
+console.log(raisePower(4, 3)); // 64
+console.log(raisePower(10, 4)); // 10000
+console.log(raisePower(7, 2)); // 49
+
+// Write a function `censorE` that accepts a string as an argument. The function should return the a new
+// version of string where all characters that are 'e's are replaced with '*'s.
+
+let censorE = (str) => {
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === "e") {
+      console.log("*");
+    } else {
+      console.log(str[i]);
+    }
+  }
+};
+
+console.log(censorE("speedy")); // 'sp**dy'
+console.log(censorE("pending")); // 'p*nding'
+console.log(censorE("scene")); // 'sc*n*'
+console.log(censorE("heat")); // 'h*at'
+
+// Write a function `fizzBuzz` that accepts a max number as an argument. The function should
+// print all numbers less than or equal to max that are divisible by either 3 or 5 but not both 3
+// and 5. The function doesn't need to return any value. It should just print to the terminal.
+
+let fizzBuzz = (max) => {
+  for (let i = 0; i <= max; i++) {
+    if ((i % 5 === 0 || i % 3 === 0) && !(i % 3 === 0 && i % 5 === 0)) {
+      console.log(i);
+    }
+  }
+};
+
+fizzBuzz(18);
+// prints
+//  3
+//  5
+//  6
+//  9
+//  10
+//  12
+//  18
+
+fizzBuzz(33);
+// prints
+//  3
+//  5
+//  6
+//  9
+//  10
+//  12
+//  18
+//  20
+//  21
+//  24
+//  25
+//  27
+//  33
