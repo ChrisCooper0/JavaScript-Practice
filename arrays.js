@@ -63,6 +63,12 @@ console.log(arr);
 let newArr = arr.slice(1, 3);
 console.log(newArr);
 
+// .includes = Checks if an element is contained in an array - Returns a boolean
+let arrayExample = ["A", "B", "C", "D"];
+arrayExample.includes("A"); // true
+arrayExample.includes("a"); // false - Method is case sensitive
+
+
 // Examples
 
 // Write a function `total` that accepts an array of numbers as an argument. The function should return
