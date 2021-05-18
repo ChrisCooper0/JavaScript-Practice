@@ -246,3 +246,62 @@ console.log(yourAverageFunction([5, 2, 7, 24])); // 9.5
 console.log(yourAverageFunction([100, 6])); // 53
 console.log(yourAverageFunction([31, 32, 40, 12, 33])); // 29.6
 console.log(yourAverageFunction([])); // null
+
+// Write a function `chooseDivisibles(numbers, target)` that accepts an array of numbers and a
+// target number as arguments. The function should return an array containing elements of the original
+// array that are divisible by the target.
+
+let chooseDivisibles = (numbers, target) => {
+  let divisibleNums = [];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % target === 0) {
+      divisibleNums.push(numbers[i]);
+    }
+  }
+  return divisibleNums;
+};
+
+console.log(chooseDivisibles([40, 7, 22, 20, 24], 4)); // [40, 20, 24]
+console.log(chooseDivisibles([9, 33, 8, 17], 3)); // [9, 33]
+console.log(chooseDivisibles([4, 25, 1000], 10)); // [1000]
+
+// Write a function `maximum` that accepts an array of numbers as an argument. The function should
+// return the largest number of the array. If the array is empty, then the function should return null.
+
+let maximum = (arr) => {
+  if (arr.length === 0) {
+    return null;
+  }
+
+  let largestNum = arr[0];
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > largestNum) {
+      largestNum = arr[i];
+    }
+  }
+  return largestNum;
+};
+
+console.log(maximum([5, 6, 3, 7])); // 7
+console.log(maximum([17, 15, 19, 11, 2])); // 19
+console.log(maximum([])); // null
+
+// Write a function `wordCount(sentence, targetWords)` that accepts a sentence string and an array of
+// `targetWords`. The function should return a count of the number of words of the sentence that are
+// in `targetWords`.
+
+let wordCount = (sentence, targetWords) => {
+  let count = 0;
+  let sentenceArr = sentence.split(" ");
+  for (let i = 0; i < sentence.length; i++) {
+    if (targetWords.includes(sentenceArr[i])) {
+      count++;
+    }
+  }
+  return count;
+};
+
+console.log(wordCount("open the window please", ["please", "open", "sorry"])); // 2
+console.log(wordCount("drive to the cinema", ["the", "driver"])); // 1
+console.log(wordCount("can I have that can", ["can", "I"])); // 3
