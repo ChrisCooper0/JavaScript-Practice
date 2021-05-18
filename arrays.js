@@ -68,7 +68,6 @@ let arrayExample = ["A", "B", "C", "D"];
 arrayExample.includes("A"); // true
 arrayExample.includes("a"); // false - Method is case sensitive
 
-
 // Examples
 
 // Write a function `total` that accepts an array of numbers as an argument. The function should return
@@ -212,3 +211,38 @@ console.log(makeAcronym("New York")); // NY
 console.log(makeAcronym("same stuff different day")); // SSDD
 console.log(makeAcronym("Laugh out loud")); // LOL
 console.log(makeAcronym("don't over think stuff")); // DOTS
+
+// Write a function `reverseArray` that accepts an array as an argument. The function should return a
+// array containing the elements of the original array in reverse order.
+
+let reverseArray = (arr) => {
+  let reversedArr = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    reversedArr.push(arr[i]);
+  }
+  return reversedArr;
+};
+
+console.log(reverseArray(["zero", "one", "two", "three"])); // ['three', 'two', 'one', 'zero']
+console.log(reverseArray([7, 1, 8])); // [8, 1, 7]
+
+// Write a function `yourAverageFunction` that accepts an array of numbers as an argument. The
+// function should return the average of all elements of the array. If the input array is empty,
+// then the function should return null.
+
+let yourAverageFunction = (nums) => {
+  if (nums.length === 0) {
+    return null;
+  }
+
+  let total = 0;
+  for (let i = 0; i < nums.length; i++) {
+    total += nums[i];
+  }
+  return total / nums.length;
+};
+
+console.log(yourAverageFunction([5, 2, 7, 24])); // 9.5
+console.log(yourAverageFunction([100, 6])); // 53
+console.log(yourAverageFunction([31, 32, 40, 12, 33])); // 29.6
+console.log(yourAverageFunction([])); // null
