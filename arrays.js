@@ -327,3 +327,21 @@ console.log(lengthiestWord("we should think outside of the box")); // 'outside'
 console.log(lengthiestWord("down the rabbit hole")); // 'rabbit'
 console.log(lengthiestWord("simmer down")); // 'simmer'
 
+// Write a function `alternatingCaps` that accepts a sentence string as an argument. The function should
+// return the sentence where words alternate between lowercase and uppercase.
+
+let alternatingCaps = (str) => {
+  let words = str.split(" ");
+
+  for (let i = 0; i < words.length; i++) {
+    if (i % 2 === 0) {
+      words[i] = words[i].toLowerCase();
+    } else {
+      words[i] = words[i].toUpperCase();
+    }
+  }
+  return words;
+};
+
+console.log(alternatingCaps("take them to school")); // 'take THEM to SCHOOL'
+console.log(alternatingCaps("What did ThEy EAT before?")); // 'what DID they EAT before?'
