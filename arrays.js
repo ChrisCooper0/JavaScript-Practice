@@ -345,3 +345,58 @@ let alternatingCaps = (str) => {
 
 console.log(alternatingCaps("take them to school")); // 'take THEM to SCHOOL'
 console.log(alternatingCaps("What did ThEy EAT before?")); // 'what DID they EAT before?'
+
+// Write a function `numberRange(min, max, step)` that accepts three numbers as arguments, `min`,
+// `max`, and `step`. The function should return all numbers between `min` and `max` at `step` intervals.
+// `min` and `max` are inclusive.
+
+let numberRange = (min, max, step) => {
+  let range = [];
+  for (let i = min; i <= max; i += step) {
+    range.push(i);
+  }
+  return range;
+};
+
+console.log(numberRange(10, 40, 5)); // [10, 15, 20, 25, 30, 35, 40]
+console.log(numberRange(14, 24, 3)); // [14, 17, 20, 23]
+console.log(numberRange(8, 35, 6)); // [8, 14, 20, 26, 32]
+
+// Write a function `removeShortWords` that accepts a sentence string as an argument. The function
+// should return a new sentence where all of the words shorter than 4 characters are removed.
+
+let removeShortWords = (str) => {
+  let words = str.split(" ");
+  let sentence = [];
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length >= 4) {
+      sentence.push(words[i]);
+    }
+  }
+  return sentence.join(" ");
+};
+
+console.log(removeShortWords("knock on the door will you")); // 'knock door will'
+console.log(removeShortWords("a terrible plan")); // 'terrible plan'
+console.log(removeShortWords("run faster that way")); // 'faster that'
+
+// Write a function `commonElements` that accepts two arrays as arguments. The function should return
+// a new array containing the elements that are found in both of the input arrays. The order of
+// the elements in the output array doesn't matter as long as the function returns the correct elements.
+
+let commonElements = (array1, array2) => {
+  let common = [];
+  for (let i = 0; i < array1.length; i++) {
+    let ele = array1[i];
+    if (array2.includes(ele)) common.push(ele);
+  }
+  return common;
+};
+
+let arr1 = ["a", "c", "d", "b"];
+let arr2 = ["b", "a", "y"];
+console.log(commonElements(arr1, arr2)); // ['a', 'b']
+
+let arr3 = [4, 7];
+let arr4 = [32, 7, 1, 4];
+console.log(commonElements(arr3, arr4)); // [4, 7]
