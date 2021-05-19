@@ -340,7 +340,7 @@ let alternatingCaps = (str) => {
       words[i] = words[i].toUpperCase();
     }
   }
-  return words;
+  return words.join(" ");
 };
 
 console.log(alternatingCaps("take them to school")); // 'take THEM to SCHOOL'
