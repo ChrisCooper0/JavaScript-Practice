@@ -350,3 +350,23 @@ console.log(contains("lion's share", "on")); // true
 console.log(contains("SORRY", "or")); // true
 console.log(contains("tangent", "gem")); // false
 console.log(contains("clock", "ok")); // false
+
+
+// Write a function which takes in two arguments and returns another function, that function takes in two arguments and also returns another function which takes in two arguments
+// Return the sum of the first arguments and add to the sum of the second arguments in each function
+// e.g. example(1,2)(1,2)(3,4) // 1 * 1 * 3 + 2 * 2 * 4 = 19
+
+// Normal function
+function example(a, b) {
+  return function (c, d) {
+    return function (e, f) {
+      return a * c * e + b * d * f;
+    };
+  };
+}
+
+// Arrow function
+let exampleArrow = (a, b) => (c, d) => (e, f) => a * c * e + b * d * f;
+
+console.log(example(1, 2)(1, 2)(3, 4)); // 19
+console.log(exampleArrow(1, 2)(1, 2)(3, 4)); // 19
