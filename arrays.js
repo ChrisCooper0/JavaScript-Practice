@@ -35,6 +35,10 @@ for (let i = 0; i < words.length; i++) {
 }
 console.log(longWords); // ['test', 'array', 'javascript']
 
+// Array destructuring
+let [tomato, mushroom, carrot] = ["🍅", "🍄", "🥕"];
+console.log(tomato, mushroom, carrot); // Output, 🍅 🍄 🥕
+
 // Array methods
 
 // .unshift() = adds to start
