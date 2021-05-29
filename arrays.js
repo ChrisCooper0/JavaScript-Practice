@@ -6,6 +6,7 @@ console.log(arr.length);
 // Find index of an item in an array
 // IndexOf
 console.log(arr.indexOf(3)); // Index position 2
+console.log(arr.indexOf(8)); // Returns -1 if not found
 
 // Access an array item
 // index position
@@ -71,6 +72,15 @@ console.log(newArr);
 let arrayExample = ["A", "B", "C", "D"];
 arrayExample.includes("A"); // true
 arrayExample.includes("a"); // false - Method is case sensitive
+
+// .concat()
+const first = [1, 2, 3];
+const second = [4, 5, 6];
+const third = [7, 8, 9];
+
+const merged = first.concat(second, third);
+
+console.log(merged); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 // Examples
 
