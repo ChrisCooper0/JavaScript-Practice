@@ -151,3 +151,30 @@ console.log(zipper(array7, array8));
 //   ['talk', 'normal'],
 //   ['shout', 'loud'],
 // ]
+
+// Write a function `spam` that accepts a 2D array as an argument. The array contains pairs as elements.
+// The first element of every pair is a number and the second element is a word. The function should
+// return a string containing the words repeated the specified number of times. See the examples.
+
+let spam = (arr) => {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i][1]; j++) {
+      result.push(arr[i][0]);
+    }
+  }
+  return result.join(" ");
+};
+
+let array9 = [
+  ["hi", 3],
+  ["bye", 2],
+];
+console.log(spam(array9)); // 'hi hi hi bye bye'
+
+let array10 = [
+  ["cat", 1],
+  ["dog", 2],
+  ["bird", 4],
+];
+console.log(spam(array10)); // 'cat dog dog bird bird bird bird'
