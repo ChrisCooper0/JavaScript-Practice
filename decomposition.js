@@ -86,3 +86,24 @@ foo();
 //   j = 2
 //   j = 3
 //   j = 4
+
+// Write a function `doubleVowel` that accepts a string as an argument. The function should return
+// the string where every occurrence of a vowel in the original string is repeated twice consecutively.
+// Vowels are the letters a, e, i, o, u.
+
+let doubleVowel = (str) => {
+  let vowels = "aeiou";
+  let newStr = "";
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(str[i])) {
+      newStr += str[i] + str[i];
+    } else {
+      newStr += str[i];
+    }
+  }
+  return newStr;
+};
+
+console.log(doubleVowel("runner")); // 'ruunneer'
+console.log(doubleVowel("stoplight")); // 'stoopliight'
+console.log(doubleVowel("gardener")); // 'gaardeeneer'
