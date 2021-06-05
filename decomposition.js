@@ -131,3 +131,22 @@ console.log(isPrime(21)); // false
 console.log(isPrime(2)); // true
 console.log(isPrime(15)); // false
 console.log(isPrime(1)); // false
+
+// Write a function `pickPrimes` that accepts an array of numbers as an argument. The function should
+// return an array containing only the prime numbers. A prime number is a number that is
+// only divisible by 1 and itself. The smallest prime number is 1.
+
+let pickPrimes = (arr) => {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    // uses isPrime function above
+    if (isPrime(arr[i])) {
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
+};
+
+console.log(pickPrimes([12, 3, 7, 18, 11])); // [3, 7, 11]
+console.log(pickPrimes([17, 23, 9, 42])); // [17, 23]
+console.log(pickPrimes([4, 2048, 100, 55])); // []
