@@ -93,3 +93,19 @@ let res3 = nums.reduce(function (a, b) {
 });
 
 console.log(res3); // 2
+
+// Write a function `forEachSum` that accepts an array of numbers as an argument and returns the total
+// sum of all numbers.
+// Your function must utilize the native Array#forEach method.
+
+let forEachSum = (arr) => {
+  let sum = 0;
+  arr.forEach((num) => {
+    sum += num;
+  });
+  return sum;
+};
+
+console.log(forEachSum([10, 3, 5])); // 18
+console.log(forEachSum([-6, 7, 9, 4])); // 14
+console.log(forEachSum([])); // 0
