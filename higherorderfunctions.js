@@ -109,3 +109,31 @@ let forEachSum = (arr) => {
 console.log(forEachSum([10, 3, 5])); // 18
 console.log(forEachSum([-6, 7, 9, 4])); // 14
 console.log(forEachSum([])); // 0
+
+// Write a function `pickAdults` that accepts an array of person objects and returns the objects that
+// have an age of at least 18.
+// Your function must utilize the native Array#filter method.
+
+let pickAdults = (arr) => {
+  let over18 = arr.filter((people) => {
+    return people.age >= 18;
+  });
+  return over18;
+};
+
+let people = [
+  { name: "alice", age: 22 },
+  { name: "bob", age: 37 },
+  { name: "pam", age: 16 },
+  { name: "jim", age: 18 },
+];
+console.log(pickAdults(people));
+// [ { name: 'alice', age: 22 }, { name: 'bob', age: 37 }, { name: 'jim', age: 18 } ]
+
+let people2 = [
+  { name: "betty", age: 23 },
+  { name: "ben", age: 15 },
+  { name: "yansi", age: 21 },
+];
+console.log(pickAdults(people2));
+// [ { name: 'betty', age: 23 }, { name: 'yansi', age: 21 } ]
