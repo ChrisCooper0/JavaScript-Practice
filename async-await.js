@@ -17,3 +17,13 @@ async function asyncCall() {
 }
 
 asyncCall();
+
+// API call with async/await
+const apiCall = async () => {
+  const url = "https://jsonplaceholder.typicode.com/todos/1";
+  const res = await fetch(url);
+  const data = await res.json();
+  console.log(data);
+};
+
+apiCall();
