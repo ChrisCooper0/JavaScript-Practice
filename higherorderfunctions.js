@@ -137,3 +137,46 @@ let people2 = [
 ];
 console.log(pickAdults(people2));
 // [ { name: 'betty', age: 23 }, { name: 'yansi', age: 21 } ]
+
+// Filter - returns a new array, can manipulate the size of new array (unlike map), returns based on condition
+// Find - returns single instance (object), returns first match, if no match - undefined
+
+const people3 = [
+  { name: "bill", age: 20, position: "developer" },
+  { name: "ben", age: 25, position: "designer" },
+  { name: "boris", age: 30, position: "the boss" },
+  { name: "bernard", age: 35, position: "intern" },
+];
+// filter
+const youngPeople = people3.filter((person) => {
+  // if (person.age < 30) {
+  //   return person;
+  // }
+  return person.age <= 25;
+});
+console.log(youngPeople); // Array with bill & ben objects
+
+const developers = people3.filter((person) => person.position === "developer");
+console.log(developers); // Array with bill object
+
+// no match
+const seniorDevs = people3.filter((item) => item.position === "senior dev");
+console.log(seniorDevs); // Empty array
+
+// find
+const ben = people3.find((person) => person.name === "ben");
+console.log(ben); // Array with ben object, returns undefined if not found
+
+// no match
+const oldPerson = people3.find((person) => person.age > 35);
+console.log(oldPerson); // undefined
+
+// multiple matches
+const randomPerson = people3.find((person) => person.age < 35);
+console.log(randomPerson); // Bill object
+
+const bill = people3.filter((person) => person.name === "bill");
+console.log(bill); // Arr with bill object
+
+console.log(ben.position); // designer
+console.log(bill[0].position); // developer
