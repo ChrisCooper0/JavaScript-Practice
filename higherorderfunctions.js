@@ -180,3 +180,19 @@ console.log(bill); // Arr with bill object
 
 console.log(ben.position); // designer
 console.log(bill[0].position); // developer
+
+// Reduce to flatten an array
+
+const data = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+const flat = data.reduce((total, amount) => {
+  return total.concat(amount);
+}, []);
+
+console.log(flat); // [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+console.log(data.flat()); // Can also use the built in .flat() method
+console.log(data.flat(2)); // Can also use the built in .flat(depth) method
