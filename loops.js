@@ -48,6 +48,22 @@ forInLoop({
 forOfLoop([7, 8, 9]);
 whileLoop([10, 11, 12]);
 
+// Break statement - Comes out of the loop
+for (let i = 0; i < 10; i++) {
+  if (i === 4) {
+    break;
+  }
+  console.log(i); // 0, 1, 2, 3
+}
+
+// Continue statement - Breaks on one iteration of the loop based on a condition
+for (let i = 0; i < 10; i++) {
+  if (i === 4) {
+    continue;
+  }
+  console.log(i); // 0, 1, 2, 3, 5, 6, 7, 8, 9
+}
+
 // Loop examples
 
 // Write a function `oneToFour` that prints all whole numbers from one to four, inclusive. The function
