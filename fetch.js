@@ -1,20 +1,19 @@
 // Fetch
 
-// fetch("https://jsonplaceholder.typicode.com/users")
-//   .then((response) => response.json())
-//   .then((data) => {
-//     console.log(data);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
+const apiCall = () => {
+  const result = document.getElementById("result");
 
-// Using async/await with Fetch
-
-const apiData = async () => {
-  const response = await fetch("https://jsonplaceholder.typicode.com/users");
-  const data = await response.json();
-  return data;
+  fetch("https://jsonplaceholder.typicode.com/users")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      data.forEach((element) => {
+        result.innerHTML += `<p><strong>Name:</strong> ${element.name}, <br> <strong>Email:</strong> ${element.email}</p>`;
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 };
 
-apiData().then((data) => console.log(data));
+apiCall();
