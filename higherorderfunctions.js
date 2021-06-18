@@ -196,3 +196,8 @@ const flat = data.reduce((total, amount) => {
 console.log(flat); // [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 console.log(data.flat()); // Can also use the built in .flat() method
 console.log(data.flat(2)); // Can also use the built in .flat(depth) method
+
+// Creates a new array for even numbers using .filter()
+const list = [1, 2, 3, 4, 5, 6];
+const evenList = list.filter((x) => x % 2 === 0);
+console.log(evenList); // [2, 4, 6]
