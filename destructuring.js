@@ -1,5 +1,6 @@
-// faster/easier way to access/unpack variables from arrays
+// You can destructure arrays and objects
 
+// Array destructuring
 const fruits = ["orange", "banana", "lemon"];
 const friends = ["john", "peter", "bob", "anna", "kelly"];
 
@@ -16,7 +17,6 @@ console.log(john, peter, bob, anna, kelly);
 console.log(john, peter, bob, anna, kelly, susan);
 console.log(john, peter, bob, anna, kelly, susan);
 // Swap Variables
-
 let first = "bob";
 let second = "john";
 
@@ -25,3 +25,14 @@ second = first;
 first = temp;
 
 [second, first] = [first, second];
+
+// Object Destructuring
+const user = {
+  id: 42,
+  is_verified: true,
+};
+
+const { id, is_verified } = user;
+
+console.log(id); // 42
+console.log(is_verified); // true
