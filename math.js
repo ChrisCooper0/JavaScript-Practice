@@ -17,3 +17,7 @@ console.log(Math.round(random * 100)); // Randon number between 1 and 100
 // Max & Min numbers
 console.log(Math.max(1, 3, 2)); // Logs 3
 console.log(Math.min(1, 3, 2)); // Logs 1
+
+// Trunc - Returns the integer portion of x, removing any fractional digits
+let number = 5.1453524545;
+console.log(Math.trunc(number)); // 5
