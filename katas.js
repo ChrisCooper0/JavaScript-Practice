@@ -16,5 +16,5 @@
 const disemvowel = (str) => {
   return str.replace(/[aeiou]/gi, "");
 };
+module.exports = disemvowel;
 
-console.log(disemvowel("TestAEIOUaeiouString"));
