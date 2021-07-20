@@ -38,3 +38,13 @@ console.log("potato" === "potato"); // true
 console.log("Tomato" === "tomato"); // false
 console.log("42" === 42); // false
 console.log(5 > 3 && 1 === 0); // false
+
+// A function to check two numbers and return true if one of the numbers is 100 or if the sum of the two numbers is 100, otherwise return false
+const is100 = (a, b) => {
+  return a === 100 || b === 100 || a + b === 100;
+};
+
+console.log(is100(100, 10)); // true
+console.log(is100(100, 100)); //true
+console.log(is100(10, 10)); //false
+console.log(is100(10, 100)); //true

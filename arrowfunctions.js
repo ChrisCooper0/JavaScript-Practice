@@ -351,7 +351,6 @@ console.log(contains("SORRY", "or")); // true
 console.log(contains("tangent", "gem")); // false
 console.log(contains("clock", "ok")); // false
 
-
 // Write a function which takes in two arguments and returns another function, that function takes in two arguments and also returns another function which takes in two arguments
 // Return the sum of the first arguments and add to the sum of the second arguments in each function
 // e.g. example(1,2)(1,2)(3,4) // 1 * 1 * 3 + 2 * 2 * 4 = 19
@@ -370,3 +369,24 @@ let exampleArrow = (a, b) => (c, d) => (e, f) => a * c * e + b * d * f;
 
 console.log(example(1, 2)(1, 2)(3, 4)); // 19
 console.log(exampleArrow(1, 2)(1, 2)(3, 4)); // 19
+
+// Write a function to get the extension of a filename
+const extension = (filename) => {
+  return filename.slice(filename.lastIndexOf("."));
+};
+
+console.log(extension("image.webp")); // .webp
+console.log(extension("package.json")); // .json
+
+// Write a function to replace every character in a given string with the character following it in the alphabet
+// String.fromCharCode
+// charCodeAt
+
+const alphabetPlusOne = (str) => {
+  return str
+    .split("")
+    .map((char) => String.fromCharCode(char.charCodeAt(0) + 1))
+    .join("");
+};
+
+console.log(alphabetPlusOne("ABCDE")); // BCDEF
