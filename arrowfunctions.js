@@ -390,3 +390,39 @@ const alphabetPlusOne = (str) => {
 };
 
 console.log(alphabetPlusOne("ABCDE")); // BCDEF
+
+// Write a function that takes a given string and returns the first and last 3 characters. Return original string if the string is not longer than 3 characters
+const new3String = (str) =>
+  str.length < 3 ? str : str.slice(0, 3) + str.slice(-3);
+
+console.log(new3String("ABC1223243DEF")); // ABCDEF
+console.log(new3String("acbd")); // abcdcbd
+
+// Write a function to extract the first half of a string of given length
+const firstHalf = (str) => {
+  return str.slice(0, Math.floor(str.length / 2));
+};
+
+console.log(firstHalf("FirstSecond")); // First
+
+// Write a function to concatenate two strings except the first character of each string
+const concatTwo = (str1, str2) => {
+  return str1.slice(1) + str2.slice(1);
+};
+
+console.log(concatTwo("aTest", "bString"));
+
+// Given two values, write a function to determine which value is nearest 100
+// const nearest100 = (val1, val2) => {
+//   if (val1 - 100 <= val2 - 100) {
+//     return val2;
+//   } else {
+//     return val1;
+//   }
+// };
+
+const nearest100 = (num1, num2) => {
+  return Math.abs(num1 - 100) < Math.abs(num2 - 100) ? num1 : num2;
+};
+
+console.log(nearest100(20, 90)); // 90
